@@ -1,0 +1,39 @@
+@model List<EcommerceApplication.Models.Product>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{ 
+    ViewData["Title"] = "Index";
+    Layout = "_FrontendLayout";
+}
+
+<div class="container-fluid">
+    <div class="row bg-title text-center text-uppercase">
+        <div class="col-md-12">
+            <h4 class="page-title">Products</h4>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var prod in Model)
+        {
+           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="white-box">
+                @*<a href="#">*@
+                <div class="product-img">
+                    <img src="~/images/logo_1_small.png">
+
+                </div>
+                <div class="product-text">
+                    <span class="pro-price bg-inverse">@prod.UnitPrice</span>
+                    <a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@prod.ProductId">@prod.ProductName</a>
+                    <small class="text-muted db">@prod.Details</small>
+                    <div>
+                        <h5 class="text-muted"> <i class="fa fa-circle" style="color:#00695C;"></i> Products</h5>
+                        <h4 class="m-b-0">45</h4>
+                    </div>
+                </div>
+                @*</a>*@
+            </div>
+        </div>
+        }
+
+    </div>
+</div>

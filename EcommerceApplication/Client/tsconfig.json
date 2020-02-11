@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5",
+    "suppressImplicitAnyIndexErrors": true,
+    "noEmitOnError": true,
+     "typeRoots": [
+        "../node_modules/@types"
+      ]
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}
